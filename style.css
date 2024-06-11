@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurogane</title>
-
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!--CSS-->
-
-    <!--javascirpt-->
-    <script src="script.js"></script>
-    <!--javascirpt-->
-
-    <!--
-    <style>
-        /* ... existing styles ... */
-        /* ... existing styles ... */
         /* Basic Reset */
         body,
         html {
@@ -229,129 +209,55 @@
         }
 
         .flag-icon {
-            width: 24px;
+            width: 30px;
             /* Adjust size as needed */
-            height: 24px;
+            height: 20px;
             /* Adjust size as needed */
         }
-    </style>
-    -->
 
-</head>
+.sareer{
+    padding-left: 20px;
+}
 
-<body>
-
-    <!-- Navigation Bar -->
-    <div class="navbar" id="myNavbar">
-        <a href="javascript:void(0);" class="icon" onclick="toggleHamburger(this)">
-            <div class="hamburger">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-        </a>
-        <a href="#home" class="active" data-lang-key="home" onclick="openTab(event, 'Home')">Home</a>
-        <a href="#portfolio" data-lang-key="portfolio" onclick="openTab(event, 'Portfolio')">Portfolio</a>
-        <a href="#blog" data-lang-key="blog" onclick="openTab(event, 'Blog')">Blog</a>
-        <a href="#store" data-lang-key="store" onclick="openTab(event, 'Store')">Store</a>
-        <a href="#contact" data-lang-key="contact" onclick="openTab(event, 'Contact')">Contact</a>
-        <div class="language-toggle" onclick="changeLanguage()">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English"
-                class="flag-icon" id="flag-icon">
-        </div>
-    </div>
-<div class="sareer">
-    <!-- Tab Content -->
-    <div id="Home" class="tab active">
-        <h2 data-lang-key="welcome_message">Physics Garne Ho</h2>
-        <p data-lang-key="home_content">SKL sir😂😂</p>
-    </div>
-
-    <div id="Portfolio" class="tab">
-        <h2 data-lang-key="portfolio_title">My Portfolio</h2>
-        <p data-lang-key="portfolio_content">This is portfolio tab.</p>
-    </div>
-
-    <div id="Blog" class="tab">
-        <h2 data-lang-key="blog_title">Blogs</h2>
-        <p data-lang-key="blog_content">Blogs maybe</p>
-    </div>
-
-    <div id="Store" class="tab">
-        <h2 data-lang-key="store_title">Chinese Products</h2>
-        <p data-lang-key="store_content">-100% guarentee definitely worksout</p>
-    </div>
-
-    <div id="Contact" class="tab">
-        <h2 data-lang-key="contact_title">Contact Us</h2>
-        <p data-lang-key="contact_content">and get killed</p>
-    </div>
-</div>
-    <!-- Footer -->
-    <footer>
-        <p data-lang-key="footer_text">© 2024 Rupesh Joshi. All rights reserved.</p>
-    </footer>
-
-
-    <!--
-    <script>
-        // JavaScript for Dynamic Tabs
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("navbar")[0].getElementsByTagName("a");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
+        /* Custom scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 5px;
+            /* Thinner scrollbar width */
+            opacity: 0;
+            /* Initially fully transparent */
+            transition: opacity 0.25s ease;
+            /* Smooth transition for opacity */
         }
 
-        // Function to handle hamburger menu toggle
-        function toggleHamburger(x) {
-            x.classList.toggle("change");
-            var navbar = document.getElementById("myNavbar");
-            if (navbar.className === "navbar") {
-                navbar.className += " responsive";
-            } else {
-                navbar.className = "navbar";
-            }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgba(136, 136, 136, 0.5);
+            /* Semi-transparent handle color */
+            border-radius: 2.5px;
+            /* Rounded corners for the handle */
         }
 
-        // Function to load and apply the selected language
-        function changeLanguage() {
-            var flagIcon = document.getElementById('flag-icon');
-            var currentLang = flagIcon.alt;
-
-            // Determine the new language based on the current language
-            var newLang = currentLang === 'English' ? 'jp' : 'en';
-            var newFlag = currentLang === 'English' ? 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg' : 'https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg';
-            var newAlt = currentLang === 'English' ? 'Japanese' : 'English';
-
-            // Update the flag icon
-            flagIcon.src = newFlag;
-            flagIcon.alt = newAlt;
-
-            // Fetch the new language file and update text content
-            fetch(newLang + '.json')
-                .then(response => response.json())
-                .then(data => {
-                    document.querySelectorAll('[data-lang-key]').forEach(element => {
-                        const key = element.getAttribute('data-lang-key');
-                        element.textContent = data[key];
-                    });
-                })
-                .catch(error => console.error('Error loading language file:', error));
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(85, 85, 85, 0.5);
+            /* Darker semi-transparent color on hover */
         }
 
-        // Initial language setup
-        changeLanguage('en'); // Load English by default
-    </script>
-    -->
+        /* Change opacity to 1 when hovering over the body */
+        body:hover::-webkit-scrollbar {
+            opacity: 1;
+            /* Fully visible when hovered */
+        }
 
-</body>
+        /* Firefox scrollbar styles */
+        body {
+            scrollbar-width: thin;
+            /* Thinner scrollbar width */
+            scrollbar-color: rgba(136, 136, 136, 0.5) transparent;
+            /* Semi-transparent handle color and transparent track */
+        }
 
-</html>
+        body:hover {
+            scrollbar-width: auto;
+            /* Default scrollbar width when hovered */
+        }
