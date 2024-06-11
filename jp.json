@@ -4,7 +4,16 @@
     "blog": "ブログ",
     "store": "ストア",
     "contact": "連絡先",
-    "welcome_message": "漫画家とゲーマーのハブへようこそ！",
+    "welcome_message": "物理学ガルネホ",
+    "home_content": "SKL 先生😂😂",
+    "portfolio_title": "ポートフォリオ",
+    "portfolio_content": "これはポートフォリオタブです",
+    "blog_title": "ブログ",
+    "blog_content": "ブログかもしれない",
+    "store_title": "中国製品",
+    "store_content": "- 百% 確実に効果が出ることを保証します",
+    "contact_title": "お問い合わせ",
+    "contact_content": "そして殺される",
     "gallery": "ギャラリー",
     "events": "イベント",
     "community": "コミュニティ",
@@ -15,5 +24,4 @@
     "community_title": "コミュニティフォーラム",
     "community_desc": "ファン同士でつながり、お気に入りのシリーズについて話し合ったり、作品を共有しましょう。",
     "footer_text": "© 2024 漫画家とゲーマーのハブ。全著作権所有。"
-  }
-  
+}
