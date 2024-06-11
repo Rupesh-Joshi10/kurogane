@@ -6,12 +6,22 @@
             font-family: Arial, sans-serif;
         }
 
+
+        body {
+            position: relative;
+            margin: 0;
+            min-height: 100%;
+            /* padding-bottom: 6.74rem; */
+            box-sizing: inherit;
+        }
+
         .sareer {
             padding-left: 20px;
         }
 
         /* Dark Theme Colors */
         body {
+            min-height: 100vh;
             background-color: #121212;
             color: #e0e0e0;
             padding-top: 10px;
@@ -117,12 +127,17 @@
             }
         }
 
+
+        .allButFooter {
+            min-height: calc(100vh - 50px);
+        }
+
         /* Footer */
         footer {
-            position: fixed;
+            position:bottom;
             bottom: 0;
             width: 100%;
-            height: 100px;
+            height: 50px;
             background-color: #333;
             color: white;
             text-align: center;
