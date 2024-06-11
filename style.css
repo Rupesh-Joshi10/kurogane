@@ -215,6 +215,10 @@
             /* Adjust size as needed */
         }
 
+.sareer{
+    padding-left: 20px;
+}
+
         /* Custom scrollbar styles */
         ::-webkit-scrollbar {
             width: 5px;
